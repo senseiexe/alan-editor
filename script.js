@@ -67,3 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicia o efeito de digitação
     typeEffect();
 });
+
+function liberarBotao() {
+    // Busca o botão pelo ID e remove o bloqueio
+    const botao = document.getElementById("btnEnviar");
+    botao.removeAttribute("disabled");
+}
