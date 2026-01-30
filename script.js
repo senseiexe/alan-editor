@@ -73,3 +73,7 @@ function liberarBotao() {
     const botao = document.getElementById("btnEnviar");
     botao.removeAttribute("disabled");
 }
+
+function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
