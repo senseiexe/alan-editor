@@ -74,6 +74,9 @@ function liberarBotao() {
     botao.removeAttribute("disabled");
 }
 
-function onSubmit(token) {
-    document.getElementById("demo-form").submit();
+function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+      const token = await grecaptcha.enterprise.execute('6LcPkFssAAAAABWRDczsjySiWvLbT_APEJ272J4_', {action: 'LOGIN'});
+    });
   }
