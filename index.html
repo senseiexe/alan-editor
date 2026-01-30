@@ -6,6 +6,11 @@
     <title>Alan da Silva | Video Editor</title>
 
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcPkFssAAAAABWRDczsjySiWvLbT_APEJ272J4_"></script>
+    <script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+</script>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="style.css">
@@ -106,11 +111,12 @@
                         <textarea name="mensagem" required></textarea>
                         <label>Sobre o Projeto</label>
                     </div>
-                    <div class="g-recaptcha" 
-                        data-sitekey="6LcPkFssAAAAABWRDczsjySiWvLbT_APEJ272J4_" 
-                        data-callback="liberarBotao"
-                        data-theme="dark">
-                    </div>
+                   <button class="g-recaptcha"
+                        data-sitekey="6LcPkFssAAAAABWRDczsjySiWvLbT_APEJ272J4_"
+                        data-callback='onSubmit'
+                        data-action='submit'>
+                      Submit
+                    </button>
                     <button type="submit" id="btnEnviar" disabled>
                         Enviar Mensagem
                     </button>
@@ -126,6 +132,7 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
