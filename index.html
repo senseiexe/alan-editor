@@ -105,7 +105,14 @@
                         <textarea name="mensagem" required></textarea>
                         <label>Sobre o Projeto</label>
                     </div>
-                    <button type="submit">Enviar Proposta</button>
+                    <div class="g-recaptcha" 
+                        data-sitekey="6Ld2uVssAAAAAA_Uc6KH3xBZUM1wRtOGIF0bxWOL" 
+                        data-callback="liberarBotao"
+                        data-theme="dark">
+                    </div>
+                    <button type="submit" id="btnEnviar" disabled>
+                        Enviar Mensagem
+                    </button>
                 </form>
             </div>
         </div>
