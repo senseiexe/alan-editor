@@ -68,9 +68,20 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
 });
 
+function venciORobo() {
+    console.log("A função foi encontrada e executada!");
+    const botao = document.getElementById("btnEnviar");
+    if (botao) {
+        botao.disabled = false;
+        // Opcional: mudar a cor para mostrar que liberou
+        botao.style.backgroundColor = "#7000ff"; 
+    }
+}
+
 function liberarBotao() { // ...tem que ser igual ao nome aqui!
     console.log("Captcha finalizado, liberando botão...");
     document.getElementById("btnEnviar").disabled = false;
 }
+
 
 
