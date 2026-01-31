@@ -68,10 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
 });
 
-function liberarBotao() {
-    // Busca o botão pelo ID e remove o bloqueio
-    const botao = document.getElementById("btnEnviar");
-    botao.removeAttribute("disabled");
+function liberarBotao() { // ...tem que ser igual ao nome aqui!
+    console.log("Captcha finalizado, liberando botão...");
+    document.getElementById("btnEnviar").disabled = false;
 }
 
 
