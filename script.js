@@ -68,20 +68,25 @@ document.addEventListener('DOMContentLoaded', () => {
     typeEffect();
 });
 
-function venciORobo() {
-    console.log("A função foi encontrada e executada!");
-    const botao = document.getElementById("btnEnviar");
-    if (botao) {
-        botao.disabled = false;
-        // Opcional: mudar a cor para mostrar que liberou
-        botao.style.backgroundColor = "#7000ff"; 
-    }
-}
 
 function liberarBotao() { // ...tem que ser igual ao nome aqui!
     console.log("Captcha finalizado, liberando botão...");
     document.getElementById("btnEnviar").disabled = false;
 }
+
+
+// Mantenha estas funções no final do arquivo, FORA de qualquer outro parêntese ou chaves
+function venciORobo() {
+    console.log("A função foi encontrada e executada!");
+    const botao = document.getElementById("btnEnviar");
+    if (botao) {
+        botao.disabled = false;
+        botao.style.backgroundColor = "#7000ff"; 
+    }
+}
+
+// Garante que o Google encontre a função mesmo se o script demorar a carregar
+window.venciORobo = venciORobo;
 
 
 
